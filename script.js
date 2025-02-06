@@ -53,8 +53,7 @@ function calculate() {
 
     reviewData.forEach((item) => {
         const percentageOfGoodReviews = (item.stars / 5) * item.reviews;
-        const percentChance = (percentageOfGoodReviews + 1) / (item.reviews + 2)
-
+        const percentChance = ((percentageOfGoodReviews + 1) / (item.reviews + 2)) * 100;
         const lineText = `Your chance of having a good time with the ${item.stars} ⭐ item with ${item.reviews} reviews is ${percentChance.toFixed(2)}%\n`;
         const lineSpan = document.createElement('span');
 
